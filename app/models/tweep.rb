@@ -1,0 +1,2 @@
+class Tweep < ApplicationRecord
+end

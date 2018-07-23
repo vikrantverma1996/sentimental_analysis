@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tweeps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Query</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tweeps.each do |tweep| %>
+      <tr>
+        <td><%= tweep.query %></td>
+        <td><%= link_to 'Show', tweep %></td>
+        <td><%= link_to 'Edit', edit_tweep_path(tweep) %></td>
+        <td><%= link_to 'Destroy', tweep, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+tweet sentimental analysis
+<br>
+positivecount=  <%=@ob['p']%>  %
+<br>
+negativecount=  <%=@ob['n']%>  %
+<br>
+neutralcount=   <%=@ob['ne']%>  %
+
+<br>
+<%if @tweet!=nil%>
+ <% @tweet.each do |tweet|%>
+      <%=tweet['text']%>
+      <br>
+      sentiment::
+      <%=tweet['sentiment']%>
+      <br>
+      <br>
+      <%end%>
+<br>
+<%end%>
+
+
+<br>
+
+<%= link_to 'New Tweep', new_tweep_path %>

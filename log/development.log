@@ -1,0 +1,1929 @@
+Started GET "/" for 127.0.0.1 at 2018-07-06 22:03:16 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.0ms)
+  [1m[35m (100.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (83.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTweeps (20180706162956)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "tweeps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "query" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180706162956"]]
+  [1m[35m (83.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-06 16:33:27.959226"], ["updated_at", "2018-07-06 16:33:27.959226"]]
+  [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-07-06 22:03:32 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 14ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-06 22:03:33 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweep" for 127.0.0.1 at 2018-07-06 22:03:41 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/tweep"):
+  
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (4.1ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.5ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.5ms)
+Started GET "/tweep" for 127.0.0.1 at 2018-07-06 22:03:51 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/tweep"):
+  
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (2.9ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.9ms)
+Started GET "/tweep/index" for 127.0.0.1 at 2018-07-06 22:03:58 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/tweep/index"):
+  
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (4.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.1ms)
+Started GET "/tweeps/index" for 127.0.0.1 at 2018-07-06 22:04:21 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 21ms (ActiveRecord: 2.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweep with 'id'=index):
+  
+app/controllers/tweeps_controller.rb:91:in `set_tweep'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.2ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:04:25 +0530
+Processing by TweepsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 3..4)):
+  
+app/controllers/tweeps_controller.rb:12:in `new'
+app/controllers/tweeps_controller.rb:12:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:04:48 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+Completed 500 Internal Server Error in 4276ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `get_tweet_sentiment' for #<TweepsController:0x007f84182dc640>):
+  
+app/controllers/tweeps_controller.rb:27:in `block in index'
+app/controllers/tweeps_controller.rb:19:in `collect'
+app/controllers/tweeps_controller.rb:19:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.8ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:05:30 +0530
+Processing by TweepsController#index as HTML
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3756ms (Views: 466.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:08:48 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `query' for nil:NilClass
+Did you mean?  to_query):
+  
+app/controllers/tweeps_controller.rb:32:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:09:51 +0530
+Processing by TweepsController#index as HTML
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    21:     <% end %>
+    22:   </tbody>
+    23: </table>
+    24:  <% @tweet.each do |tweet|%>
+    25:       <%=tweet['text']%>
+    26:       <br>
+    27:       sentiment::
+  
+app/views/tweeps/index.html.erb:24:in `_app_views_tweeps_index_html_erb__2478752170996941988_70102581147100'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:10:19 +0530
+Processing by TweepsController#index as HTML
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    21:     <% end %>
+    22:   </tbody>
+    23: </table>
+    24: <!--  <% @tweet.each do |tweet|%>
+    25:       <%=tweet['text']%>
+    26:       <br>
+    27:       sentiment::
+  
+app/views/tweeps/index.html.erb:24:in `_app_views_tweeps_index_html_erb__2478752170996941988_70102590496120'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:10:53 +0530
+Processing by TweepsController#index as HTML
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:10:55 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (12.0ms)
+  Rendered tweeps/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 47ms (Views: 35.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:11:01 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uNPi/2syOYvHY+nHo7OFCoBxW/hm8PmmY8b6fXh+0RIOgl9pnQdSp1dX5I6Rbg9n063gETIjedeaH1ZhoT83lA==", "tweep"=>{"query"=>"donald"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "donald"], ["created_at", "2018-07-06 16:41:01.730425"], ["updated_at", "2018-07-06 16:41:01.730425"]]
+  [1m[35m (197.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps/1
+Completed 302 Found in 206ms (ActiveRecord: 199.1ms)
+
+
+Started GET "/tweeps/1" for 127.0.0.1 at 2018-07-06 22:11:01 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tweeps/show.html.erb within layouts/application
+  Rendered tweeps/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:11:04 +0530
+Processing by TweepsController#index as HTML
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:11:24 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3294ms (Views: 14.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:13:11 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (2.6ms)
+  Rendered tweeps/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:13:20 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bxhXdaS3s6qpyyv5Z/dKzv45VoDJy9wlG/L8AiBGlu/ZSerjUoLYhjn/JrBVKsCjreXtaZ0YXFTiK1Ae+QdwaQ==", "tweep"=>{"query"=>"fifa"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "fifa"], ["created_at", "2018-07-06 16:43:20.011721"], ["updated_at", "2018-07-06 16:43:20.011721"]]
+  [1m[35m (164.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps/2
+Completed 302 Found in 177ms (ActiveRecord: 166.5ms)
+
+
+Started GET "/tweeps/2" for 127.0.0.1 at 2018-07-06 22:13:20 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tweeps/show.html.erb within layouts/application
+  Rendered tweeps/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweeps/2" for 127.0.0.1 at 2018-07-06 22:13:24 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tweeps/show.html.erb within layouts/application
+  Rendered tweeps/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweeps/2" for 127.0.0.1 at 2018-07-06 22:13:25 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tweeps/show.html.erb within layouts/application
+  Rendered tweeps/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:13:30 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (1.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3244ms (Views: 10.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:19:34 +0530
+Processing by TweepsController#index as HTML
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    21:     <% end %>
+    22:   </tbody>
+    23: </table>
+    24:  <% @tweet.each do |tweet|%>
+    25:       <%=tweet['text']%>
+    26:       <br>
+    27:       sentiment::
+  
+app/views/tweeps/index.html.erb:24:in `_app_views_tweeps_index_html_erb__2478752170996941988_70102577332880'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.6ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:19:51 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3145ms (Views: 14.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/tweeps/2" for 127.0.0.1 at 2018-07-06 22:23:36 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sb5HG4syWtownsHxZPKGWyoFybFl/0/HEMOfhoqR3g2X6LrxnMWhVe2R5tiMjNs+ZpflgcFtuR1HQHHJANi2Xw==", "id"=>"2"}
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 2]]
+  [1m[35m (83.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 92ms (ActiveRecord: 84.4ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:23:36 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (1.7ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3550ms (Views: 16.0ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/tweeps/1" for 127.0.0.1 at 2018-07-06 22:23:54 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7zpn3cNhDNjdbGSi9a/Rr+LFcKB1WA2Bz4cxEaGrdUDJbJo31Jb3VwBjQ4sd0YzKrldckNHK+1uYBN9eK+IdEg==", "id"=>"1"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 1]]
+  [1m[35m (102.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 111ms (ActiveRecord: 106.3ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:23:54 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.6ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `query' for nil:NilClass
+Did you mean?  to_query):
+  
+app/controllers/tweeps_controller.rb:34:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:24:55 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 17.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:24:59 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (5.0ms)
+  Rendered tweeps/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 39ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:25:12 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EPpAGf/cbvCb9n2gbZ/TKHZr8Ew12DvzetoTIktJJGOmq/2PCekF3AvCcOlfQllFJbdLpWELu4KDA78+kgjC5Q==", "tweep"=>{"query"=>"india vs england"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "india vs england"], ["created_at", "2018-07-06 16:55:12.864051"], ["updated_at", "2018-07-06 16:55:12.864051"]]
+  [1m[35m (167.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps/3
+Completed 302 Found in 175ms (ActiveRecord: 169.7ms)
+
+
+Started GET "/tweeps/3" for 127.0.0.1 at 2018-07-06 22:25:13 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tweeps/show.html.erb within layouts/application
+  Rendered tweeps/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:26:15 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3165ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/tweeps/3" for 127.0.0.1 at 2018-07-06 22:26:58 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JyDpEvFlb7Jkc4d3m3FOrRaWuuM05BgPfTY/k69Pm1wBdhT45pKUPbl8oF5zDxPIWgSW05B27tUqtdHcJQbzDg==", "id"=>"3"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 3]]
+  [1m[35m (99.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 111ms (ActiveRecord: 100.3ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:26:58 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 28.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:27:00 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (5.7ms)
+  Rendered tweeps/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:27:04 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VnB9wrNEVPfHtSfQASQ0U7gxuvAAWxQD1uUZwiB+TJ7gIcBURXE/21eBKpkz+b4+6+0BGVSIlHIvPLXe+T+qGA==", "tweep"=>{"query"=>"a"}, "commit"=>"Create Tweep"}
+  [1m[35m (1.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "a"], ["created_at", "2018-07-06 16:57:04.609163"], ["updated_at", "2018-07-06 16:57:04.609163"]]
+  [1m[35m (183.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps/4
+Completed 302 Found in 197ms (ActiveRecord: 185.1ms)
+
+
+Started GET "/tweeps/4" for 127.0.0.1 at 2018-07-06 22:27:04 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tweeps/show.html.erb within layouts/application
+  Rendered tweeps/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:27:10 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3351ms (Views: 13.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:27:54 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3382ms (Views: 18.5ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/tweeps/4" for 127.0.0.1 at 2018-07-06 22:28:02 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n3Si5T3QapUATGOEY0RSJDJQ7+fZgmvGJ6Hi0x0TqmK5Il8PKieRGt1DRK2LOg9BfsLD130QnRxwIgycl1rCMA==", "id"=>"4"}
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 4]]
+  [1m[35m (79.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 88ms (ActiveRecord: 80.1ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:28:02 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:28:03 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (1.8ms)
+  Rendered tweeps/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:28:07 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"obGGpG0pXtfuRlZIT4eXo/5NBlEsTaCKc0mK0NjLbQwX4Dsymxw1+35yWwF9Wh3OrZG9uHieIPuKkCbMAYqLig==", "tweep"=>{"query"=>"qq"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "qq"], ["created_at", "2018-07-06 16:58:07.927432"], ["updated_at", "2018-07-06 16:58:07.927432"]]
+  [1m[35m (180.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 182.4ms)
+
+
+  
+NoMethodError (undefined method `index_url' for #<TweepsController:0x007f840f923188>
+Did you mean?  index):
+  
+app/controllers/tweeps_controller.rb:68:in `block (2 levels) in create'
+app/controllers/tweeps_controller.rb:66:in `create'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.1ms)
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:28:41 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"obGGpG0pXtfuRlZIT4eXo/5NBlEsTaCKc0mK0NjLbQwX4Dsymxw1+35yWwF9Wh3OrZG9uHieIPuKkCbMAYqLig==", "tweep"=>{"query"=>"qq"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "qq"], ["created_at", "2018-07-06 16:58:41.692964"], ["updated_at", "2018-07-06 16:58:41.692964"]]
+  [1m[35m (90.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps/index
+Completed 302 Found in 100ms (ActiveRecord: 91.6ms)
+
+
+Started GET "/tweeps/index" for 127.0.0.1 at 2018-07-06 22:28:41 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweep with 'id'=index):
+  
+app/controllers/tweeps_controller.rb:104:in `set_tweep'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+Started GET "/tweeps/index" for 127.0.0.1 at 2018-07-06 22:29:25 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweep with 'id'=index):
+  
+app/controllers/tweeps_controller.rb:104:in `set_tweep'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+Started GET "/tweeps/index" for 127.0.0.1 at 2018-07-06 22:29:29 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweep with 'id'=index):
+  
+app/controllers/tweeps_controller.rb:104:in `set_tweep'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.0ms)
+Started GET "/tweeps/index" for 127.0.0.1 at 2018-07-06 22:29:34 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweep with 'id'=index):
+  
+app/controllers/tweeps_controller.rb:104:in `set_tweep'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+Started GET "/tweeps/index" for 127.0.0.1 at 2018-07-06 22:29:47 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweep with 'id'=index):
+  
+app/controllers/tweeps_controller.rb:104:in `set_tweep'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+Started GET "/tweeps/index" for 127.0.0.1 at 2018-07-06 22:29:49 +0530
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweep with 'id'=index):
+  
+app/controllers/tweeps_controller.rb:104:in `set_tweep'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+Started GET "/tweeps/index" for 127.0.0.1 at 2018-07-06 22:30:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TweepsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweep with 'id'=index):
+  
+app/controllers/tweeps_controller.rb:104:in `set_tweep'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.5ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:30:23 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3419ms (Views: 190.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/tweeps/6" for 127.0.0.1 at 2018-07-06 22:30:34 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h9UeeIaPGcB3EWaXx4ppb+pYq96iqZ11Xl1BQAoKd2Shg+OSkXjiT6oeQb4v9DQKpsqH7gY7a68J3q8PgEMfNg==", "id"=>"6"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 6]]
+  [1m[35m (229.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 233ms (ActiveRecord: 229.9ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:30:34 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3319ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tweeps/5" for 127.0.0.1 at 2018-07-06 22:30:42 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GrifYoteJGPmNNrLep3/+iueg8Ggm/ZHtmzBBcRX70E87mKInKnf7Ds7/eKS46KfZwyv8QQJAJ3h7y9KTh6HEw==", "id"=>"5"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 5]]
+  [1m[35m (83.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 87ms (ActiveRecord: 84.1ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:30:42 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:31:17 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (14.4ms)
+  Rendered tweeps/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 47ms (Views: 35.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:31:36 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n2LAQlj1BYfxXdpu/v1N1ahDk+nbNJic4pEe8VpkAcQpM33UrsBuq2Fp1yfMIMe4+58oAI/nGO0bSLLtgyXnQg==", "tweep"=>{"query"=>"donald"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "donald"], ["created_at", "2018-07-06 17:01:36.578303"], ["updated_at", "2018-07-06 17:01:36.578303"]]
+  [1m[35m (189.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 194ms (ActiveRecord: 189.8ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:31:36 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3378ms (Views: 13.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tweeps/7" for 127.0.0.1 at 2018-07-06 22:33:05 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mFiJ/EtFx/1LtL7yEU2MRPV1yj1wmwhucwiVzogxTEi+DnQWXLI8cpa7mdv5M9EhuefmDdQJ/rQki3uBAngkGg==", "id"=>"7"}
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 7]]
+  [1m[35m (80.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 94ms (ActiveRecord: 82.4ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:33:05 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:33:07 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (7.2ms)
+  Rendered tweeps/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:33:11 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioSAZOabCtORMKpGoi8CjNYqWVDorXb6fSq8FbtgxtI81T3yEK5h/wEEpw+Q8ojhhfbiubx+9ouE8xAJYiEgVA==", "tweep"=>{"query"=>"donald"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "donald"], ["created_at", "2018-07-06 17:03:11.977432"], ["updated_at", "2018-07-06 17:03:11.977432"]]
+  [1m[35m (189.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 195ms (ActiveRecord: 190.7ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:33:12 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10539ms (Views: 12.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:34:58 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4180ms (Views: 21.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/tweeps/8" for 127.0.0.1 at 2018-07-06 22:35:08 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Wg09mxqy/WOpGMG4kn15pmAGGA23O9xeyxEbY70r5J98W8BxDUUG7HQX5pF6AyTDLJQ0PROpKoSckvUsN2KMzQ==", "id"=>"8"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 8]]
+  [1m[35m (90.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 98ms (ActiveRecord: 90.9ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:35:08 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (1.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 31.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:35:10 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (1.9ms)
+  Rendered tweeps/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:35:17 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XS3noR/OIEtvjYKJHlzHtiyJ5G5ZU7ifWUsubAGeGCHrfFo36ftLZ/+5j8AsgU3bf1Vfhw2AOO6gkoJw2N/+pw==", "tweep"=>{"query"=>"india vs england"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "india vs england"], ["created_at", "2018-07-06 17:05:17.253468"], ["updated_at", "2018-07-06 17:05:17.253468"]]
+  [1m[35m (179.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 186ms (ActiveRecord: 180.1ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:35:17 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7013ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:35:37 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (2.4ms)
+  Rendered tweeps/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:35:48 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 3128ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:42:27 +0530
+  
+SyntaxError (/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:18: syntax error, unexpected keyword_else
+        else if analysis.sentiment tweet=="negative"
+            ^
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:20: syntax error, unexpected keyword_else
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:22: syntax error, unexpected keyword_end
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:119: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tweeps_controller.rb:18: syntax error, unexpected keyword_else
+app/controllers/tweeps_controller.rb:20: syntax error, unexpected keyword_else
+app/controllers/tweeps_controller.rb:22: syntax error, unexpected keyword_end
+app/controllers/tweeps_controller.rb:119: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.5ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:42:49 +0530
+  
+SyntaxError (/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:18: syntax error, unexpected keyword_elsif
+        elsif analysis.sentiment tweet=="negative"
+             ^
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:20: syntax error, unexpected keyword_else
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:22: syntax error, unexpected keyword_end
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:119: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tweeps_controller.rb:18: syntax error, unexpected keyword_elsif
+app/controllers/tweeps_controller.rb:20: syntax error, unexpected keyword_else
+app/controllers/tweeps_controller.rb:22: syntax error, unexpected keyword_end
+app/controllers/tweeps_controller.rb:119: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:43:57 +0530
+  
+SyntaxError (/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:18: syntax error, unexpected keyword_elsif
+        elsif analysis.sentiment tweet=="negative"
+             ^
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:20: syntax error, unexpected keyword_else
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:22: syntax error, unexpected keyword_end
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:119: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tweeps_controller.rb:18: syntax error, unexpected keyword_elsif
+app/controllers/tweeps_controller.rb:20: syntax error, unexpected keyword_else
+app/controllers/tweeps_controller.rb:22: syntax error, unexpected keyword_end
+app/controllers/tweeps_controller.rb:119: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:44:33 +0530
+  
+SyntaxError (/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:22: syntax error, unexpected keyword_end
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:119: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tweeps_controller.rb:22: syntax error, unexpected keyword_end
+app/controllers/tweeps_controller.rb:119: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.6ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:45:16 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4597ms (Views: 14.1ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/tweeps/9" for 127.0.0.1 at 2018-07-06 22:45:39 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1UJZMh6+iFJH3xJycFITa5I0rGFPkkL1Ylnmq+JM88LzFKTYCUlz3ZrQNVuYLE4O3qaAUesAtC812gjkaAWbkA==", "id"=>"9"}
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 9]]
+  [1m[35m (84.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 94ms (ActiveRecord: 87.3ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:45:39 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 34ms (Views: 28.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:45:44 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (3.6ms)
+  Rendered tweeps/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:45:48 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QcJM+ZvyScTIOJ80apY3RrGPcaa+KDFsixA4XLBNOaf3k/Fvbcci6FgMkn1YS70r4lPKT+r7sR1yyZRAaQzfIQ==", "tweep"=>{"query"=>"qwerty"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "qwerty"], ["created_at", "2018-07-06 17:15:48.882232"], ["updated_at", "2018-07-06 17:15:48.882232"]]
+  [1m[35m (174.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 192ms (ActiveRecord: 177.0ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:45:49 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 5762ms (Views: 16.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:49:10 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 9655ms (Views: 17.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:50:23 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4951ms (Views: 17.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/tweeps/10" for 127.0.0.1 at 2018-07-06 22:50:56 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ocjyuYh1EAPGryQDun8Av1exx5uoinuLkWeuF9nN5DyHng9Tn4LrjBugAypSAV3aGyPrqwwYjVHG5EBYU4SMbg==", "id"=>"10"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 10]]
+  [1m[35m (101.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 109ms (ActiveRecord: 101.8ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:50:56 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.9ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 34ms (Views: 26.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:50:59 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (3.2ms)
+  Rendered tweeps/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:51:11 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9p1x6Js2mfjcSzB2flo9tT/FfeXLvSB8Q4GRYKHxyZpAzMx+bQPy1Ex/PT9Mh7fYbBnGDJ9uoA26WD18eLAvHA==", "tweep"=>{"query"=>"donald"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "donald"], ["created_at", "2018-07-06 17:21:11.037601"], ["updated_at", "2018-07-06 17:21:11.037601"]]
+  [1m[35m (137.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 149ms (ActiveRecord: 140.9ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:51:11 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 11123ms (Views: 17.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/tweeps/11" for 127.0.0.1 at 2018-07-06 22:52:19 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dZaUINed717RCX8yX1FGlR8zogZgvPvZ2dJadzmkz3hTwGnKwGoU0QwGWBu3LxvwU6GONsQuDQOOUbQ4s+2nKg==", "id"=>"11"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 11]]
+  [1m[35m (93.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 108ms (ActiveRecord: 95.9ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:52:19 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:52:22 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (2.2ms)
+  Rendered tweeps/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:52:26 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4xbOWEELQT1uwfIrvl4EHmu62s+LBnWMHO5UiPV3zEBVR3POtz4qEf71/2KMg45zOGZhJt/V9f3lN/iULDYqxg==", "tweep"=>{"query"=>"donald"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "donald"], ["created_at", "2018-07-06 17:22:26.399069"], ["updated_at", "2018-07-06 17:22:26.399069"]]
+  [1m[35m (135.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 139ms (ActiveRecord: 135.7ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:52:26 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3187ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/tweeps_controller.rb:18:in `get_tweet_sentiment'
+app/controllers/tweeps_controller.rb:49:in `block in index'
+app/controllers/tweeps_controller.rb:44:in `collect'
+app/controllers/tweeps_controller.rb:44:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.8ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:53:20 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 3689ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized class variable @@positivecount in ActionView::CompiledTemplates):
+    23: </table>
+    24: tweet sentimental analysis
+    25: <br>
+    26: positivecount=  <%=@@positivecount%>  %
+    27: <br>
+    28: negativecount=  <%=@@negativecount%>  %
+    29: <br>
+  
+app/views/tweeps/index.html.erb:26:in `_app_views_tweeps_index_html_erb__4591934106224624248_70182620769820'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.3ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:54:46 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3448ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/tweeps_controller.rb:18:in `get_tweet_sentiment'
+app/controllers/tweeps_controller.rb:49:in `block in index'
+app/controllers/tweeps_controller.rb:44:in `collect'
+app/controllers/tweeps_controller.rb:44:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:58:43 +0530
+  
+SyntaxError (/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:9: syntax error, unexpected tIDENTIFIER, expecting ';' or '\n'
+  def get_tweet_sentiment tweet a b c
+                                 ^
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:49: syntax error, unexpected tIVAR, expecting keyword_end
+...t @positivecount @negativecount @neutralcount
+...                               ^
+/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:121: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/tweeps_controller.rb:9: syntax error, unexpected tIDENTIFIER, expecting ';' or '\n'
+app/controllers/tweeps_controller.rb:49: syntax error, unexpected tIVAR, expecting keyword_end
+app/controllers/tweeps_controller.rb:121: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.6ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.0ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:59:10 +0530
+  
+SyntaxError (/home/prankur/007/tweetu/app/controllers/tweeps_controller.rb:49: syntax error, unexpected tIVAR, expecting keyword_end
+...t @positivecount @negativecount @neutralcount
+...                               ^):
+  
+app/controllers/tweeps_controller.rb:49: syntax error, unexpected tIVAR, expecting keyword_end
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.2ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:59:30 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3707ms (Views: 14.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/tweeps/12" for 127.0.0.1 at 2018-07-06 22:59:47 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"V9KtOmOUq6Eswk6McE2xgPYs1isgeCcHjmYYYyR2zPxxhFDQdGNQLvHNaaWYM+zlur76G4Tq0d3Z5fYsrj+krg==", "id"=>"12"}
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 12]]
+  [1m[35m (77.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 87ms (ActiveRecord: 78.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:59:48 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 22:59:50 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (3.5ms)
+  Rendered tweeps/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 22:59:56 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rG0nxHl2HatTHJ25VO4cnSmJuXFdL/ru+FdtON8z+AkaPJpSj0N2h8MokPBmM5bwelUCmAn8ep8BjsEkBnIejw==", "tweep"=>{"query"=>"donald"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "donald"], ["created_at", "2018-07-06 17:29:56.893644"], ["updated_at", "2018-07-06 17:29:56.893644"]]
+  [1m[35m (165.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 176ms (ActiveRecord: 167.1ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 22:59:57 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10342ms (Views: 19.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:01:52 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4623ms (Views: 16.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:06:51 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 13889ms (ActiveRecord: 2.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/tweeps_controller.rb:9:in `get_tweet_sentiment'
+app/controllers/tweeps_controller.rb:42:in `block in index'
+app/controllers/tweeps_controller.rb:37:in `collect'
+app/controllers/tweeps_controller.rb:37:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.4ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:07:25 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3406ms (Views: 19.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:08:28 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:08:30 +0530
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 19602ms (Views: 18.9ms | ActiveRecord: 0.7ms)
+
+
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 15935ms (Views: 22.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/tweeps/13" for 127.0.0.1 at 2018-07-06 23:09:11 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hxaV7EkvS1Xm73TVryof5Dr0CQtGyPQs980KqZ64pi+hQGgGXtiw2jvgU/xHVEKBdmYlO+JaAvagTuTmFPHOfQ==", "id"=>"13"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 13]]
+  [1m[35m (82.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 90ms (ActiveRecord: 83.8ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:09:11 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.7ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 23:09:13 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (1.9ms)
+  Rendered tweeps/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 23:09:19 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9lHevF19wB0zs5S4Wxnl7SZYq7ksCpLa2Ckm52aF+UhiPrsB0CcLOT6wxvTse3650XZR7BjqjqSuQiHRNvxYw==", "tweep"=>{"query"=>"india"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "india"], ["created_at", "2018-07-06 17:39:19.796165"], ["updated_at", "2018-07-06 17:39:19.796165"]]
+  [1m[35m (165.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 180ms (ActiveRecord: 170.4ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:09:19 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.6ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9194ms (Views: 17.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:12:04 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 12597ms (Views: 14.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:12:51 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 10874ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:13:54 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 17472ms (Views: 18.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:16:24 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (161.1ms)
+Completed 500 Internal Server Error in 16333ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `positivecount' for #<#<Class:0x007fa956b5bce0>:0x007fa956b5a818>):
+    23: </table>
+    24: tweet sentimental analysis
+    25: <br>
+    26: positivecount=  <%=positivecount%>  %
+    27: <br>
+    28: negativecount=  <%=negativecount%>  %
+    29: <br>
+  
+app/views/tweeps/index.html.erb:26:in `_app_views_tweeps_index_html_erb__4591934106224624248_70182640575260'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.2ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:24:02 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 10714ms (Views: 19.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:25:19 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (1.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.3ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (147.5ms)
+Completed 500 Internal Server Error in 4394ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `ob' for #<#<Class:0x007fa965b0b358>:0x007fa95509d700>):
+    23: </table>
+    24: tweet sentimental analysis
+    25: <br>
+    26: positivecount=  <%=ob['p']%>  %
+    27: <br>
+    28: negativecount=  <%=@ob['n']%>  %
+    29: <br>
+  
+app/views/tweeps/index.html.erb:26:in `_app_views_tweeps_index_html_erb__4591934106224624248_70182626457620'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.3ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:26:08 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+Completed 500 Internal Server Error in 3967ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `ob' for #<TweepsController:0x007fa9679c13d8>
+Did you mean?  obj
+               object_id
+               @ob):
+  
+app/controllers/tweeps_controller.rb:53:in `block in index'
+app/controllers/tweeps_controller.rb:46:in `collect'
+app/controllers/tweeps_controller.rb:46:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.6ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:26:26 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7612ms (Views: 15.6ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/tweeps/14" for 127.0.0.1 at 2018-07-06 23:26:57 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KaKPypRPTff5mZqeBWt/nvOfxCUmp92YVTcCmXn9VFMP9HIgg7i2eCSWvbftFSL7vw3oFYI1K0ICtOzW87Q8AQ==", "id"=>"14"}
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 14]]
+  [1m[35m (92.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 100ms (ActiveRecord: 93.3ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:26:57 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps/new" for 127.0.0.1 at 2018-07-06 23:27:00 +0530
+Processing by TweepsController#new as HTML
+  Rendering tweeps/new.html.erb within layouts/application
+  Rendered tweeps/_form.html.erb (3.7ms)
+  Rendered tweeps/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweeps" for 127.0.0.1 at 2018-07-06 23:27:05 +0530
+Processing by TweepsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2oNJkrQDlA4IQ2QBlUn1cesvOEWzbX0fppwUMnCw+yFs0vQEQjb/Iph3aUinlH8cuPODrOe+/W5fRbguqfEdpw==", "tweep"=>{"query"=>"india"}, "commit"=>"Create Tweep"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "tweeps" ("query", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["query", "india"], ["created_at", "2018-07-06 17:57:05.255434"], ["updated_at", "2018-07-06 17:57:05.255434"]]
+  [1m[35m (173.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 186ms (ActiveRecord: 177.5ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:27:05 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4612ms (Views: 18.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:27:38 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4622ms (Views: 18.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:28:14 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:28:15 +0530
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4808ms (Views: 15.2ms | ActiveRecord: 0.8ms)
+
+
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5302ms (Views: 13.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:28:44 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4154ms (Views: 16.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:32:42 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 4652ms (ActiveRecord: 2.2ms)
+
+
+  
+ArgumentError (comparison of String with 0.25 failed):
+  
+app/controllers/tweeps_controller.rb:14:in `>'
+app/controllers/tweeps_controller.rb:14:in `get_tweet_sentiment'
+app/controllers/tweeps_controller.rb:50:in `block in index'
+app/controllers/tweeps_controller.rb:46:in `collect'
+app/controllers/tweeps_controller.rb:46:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:33:54 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+HTTP::ConnectionError (failed to connect: getaddrinfo: Name or service not known):
+  
+app/controllers/tweeps_controller.rb:48:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.5ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:34:05 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (1.2ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3449ms (ActiveRecord: 1.3ms)
+
+
+  
+ArgumentError (comparison of String with 0.25 failed):
+  
+app/controllers/tweeps_controller.rb:16:in `>'
+app/controllers/tweeps_controller.rb:16:in `get_tweet_sentiment'
+app/controllers/tweeps_controller.rb:52:in `block in index'
+app/controllers/tweeps_controller.rb:48:in `collect'
+app/controllers/tweeps_controller.rb:48:in `index'
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.9ms)
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:35:07 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3468ms (Views: 16.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:35:56 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3327ms (Views: 18.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-06 23:36:41 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 3289ms (Views: 16.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-23 15:23:41 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-23 15:23:42 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-23 15:23:43 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/prankur/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.0.7/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-23 15:24:40 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.1ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 4539ms (Views: 420.4ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/tweeps/15" for 127.0.0.1 at 2018-07-23 15:24:52 +0530
+Processing by TweepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wZZBfEznw99/jj9cOYprBq2axDCnA+lN/sXBK6MSu2se4wDum4ZOCekunt7sX13kAb5Hf8sRQF6ZuuRFiBrgUg==", "id"=>"15"}
+  [1m[36mTweep Load (0.5ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" WHERE "tweeps"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "tweeps" WHERE "tweeps"."id" = ?[0m  [["id", 15]]
+  [1m[35m (133.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tweeps
+Completed 302 Found in 160ms (ActiveRecord: 135.0ms)
+
+
+Started GET "/tweeps" for 127.0.0.1 at 2018-07-23 15:24:52 +0530
+Processing by TweepsController#index as HTML
+  [1m[36mTweep Load (0.4ms)[0m  [1m[34mSELECT  "tweeps".* FROM "tweeps" ORDER BY "tweeps"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tweeps/index.html.erb within layouts/application
+  [1m[36mTweep Load (0.2ms)[0m  [1m[34mSELECT "tweeps".* FROM "tweeps"[0m
+  Rendered tweeps/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 0.7ms)
+
+
